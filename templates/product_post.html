@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>H&S Shopping Mall</title>
+    <link rel="stylesheet" href="../css/boardinsert.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--제이쿼리 효과-->
+  <script src="../js/boardinsert.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--슬릭 효과-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <!--aos효과-->
+  <style type="text/css"></style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!--greensock효과-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <!--swiper효과-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!----->
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+</head>
+<body>
+  <div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Offcanvas Menu Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="offcanvas-menu-wrapper">
+    <div class="offcanvas__option">
+        <div class="offcanvas__links">
+
+        </div>
+    </div>
+    <div class="offcanvas__nav__option">
+        <a href="#" class="search-switch"><img src="../img/icon/search.png" alt=""></a>
+        <a href="#"><img src="../img/icon/heart.png" alt=""></a>
+        <a href="#"><img src="../img/icon/cart.png" alt=""></a>
+    </div>
+
+</div>
+<!-- Offcanvas Menu End -->
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-7">
+                    <div class="header__top__left">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__top__right">
+                        <div class="header__top__links">
+                          <a href=Logout.jsp> 로그아웃 </a>
+                          <a href=MemberUpdate.jsp> 회원정보 수정 </a>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="header__logo">
+                    <a href="Index.jsp"><img src="../img/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li><a href="Index.jsp">Home</a></li>
+                        <li><a href="ProductList.jsp">Shop</a></li>  
+                        <li><a href="board.jsp">Community</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="header__nav__option">
+                    <a href="CartList.jsp"><img src="../img/icon/cart.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="canvas__open"><i class="fa fa-bars"></i></div>
+    </div>
+</header>
+
+	<article class="board-sec">
+
+    <div class="box">
+
+      <h3>상품 등록</h3>
+
+		
+      <form method="post" action="/insert" enctype="multipart/form-data">
+
+        <ul>
+
+          <li>상품이름</li>
+          <li><input type="text" class="form-control text-dark" placeholder="상품이름" name="name" maxlength="50"></li>
+          <li>상품가격(원)</li>
+          <li><input type="text" class="form-control text-dark" placeholder="상품가격" name="price" maxlength="50"></li>
+          <li>상품안내</li>
+          <li><textarea rows="10" cols="45" class="form-control text-dark" placeholder="상품설명" name="detail" maxlength="50"></textarea></li>
+          <li>상품입고수량(개)</li>
+          <li><input type="text" class="form-control text-dark" placeholder="상품수량" name="stock" maxlength="50"></li>
+          <li>성별</li>
+          <li>
+          <select name="gender" class="form-control text-dark" maxlength="50" rows="10">
+		  	<option value="남자">남자</option>
+			<option value="여자">여자</option>
+		  </select>
+		  </li>
+		  <li>사이즈</li>
+		  <li>
+          <select name="size" class="form-control text-dark" maxlength="50" rows="10">
+		  	<option value="XXL">XXL</option>
+				<option value="XL">XL</option>
+				<option value="L">L</option>
+				<option value="M">M</option>
+				<option value="S">S</option>
+		  </select>
+		  </li>
+		  <li>상품이미지</li>
+          <li><input type="file" class="form-control text-dark" placeholder="상품이미지" name="user_img" maxlength="50"></li>
+        </ul>
+
+
+      <div class="flex-box">
+        <button type="reset" class="btn-default"><a style="color: black">다시쓰기</a></button>
+        <button class="btn-rank2" type="submit">상품 등록</button>
+      </div>
+	</form>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/mixitup.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
