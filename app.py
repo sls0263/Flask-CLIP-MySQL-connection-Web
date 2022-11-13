@@ -13,7 +13,7 @@ from os.path import join, dirname, realpath
 
 app = Flask(__name__, static_url_path="/static")
 # java file upload_path
-UPLOADS_PATH = join(dirname(realpath(__file__)), 'C:/Users/User/Documents/spring/H&S/src/main/webapp/data/')
+UPLOADS_PATH = join(dirname(realpath(__file__)), 'c://~')
 # python upload_path
 # UPLOADS_PATH = join(dirname(realpath(__file__)), 'static/images/')
 
@@ -134,19 +134,6 @@ def dbtest():
         db.close()
 
         return render_template('product_post.html')
-
-
-
-# @app.route('/upload')
-# def render_file():
-#     return render_template('index.html')
-
-# @app.route('/fileUpload', methods = ['GET', 'POST'])
-# def file_upload():
-#     if request.method == 'POST':
-#         f = request.files['file']
-#         f.save('static/images/' + secure_filename(f.filename))
-#         return '파일이 저장되었습니다'
 
 if __name__ == '__main__':
     app.debug = True
