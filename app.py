@@ -85,7 +85,7 @@ def imagefile():
         print (keyword)
 
         db = pymysql.connect(host="localhost", port=3306,
-        user="root", password="1234", database="smartproject",
+        user="user_id", password="password", database="dbname",
         charset="utf8")
         cursor = db.cursor()
         
@@ -99,14 +99,13 @@ def imagefile():
         keyword = keyword
 
         # DB 데이터 삽입하기
-        cursor.execute('use smartproject;')
         cursor.execute('insert into shop_product (name, price, detail, stock, gender, size, image, keyword) values (%s,%s,%s,%s,%s,%s,%s,%s)', (name, price, detail, stock, gender, size, image, keyword))
 
         # DB에 수정사항 반영하기
         db.commit()
         # mysql cursor 종료하기
         db.close()
-        return redirect("http://localhost:8080/H&S/admin/ProductMgr.jsp")
+        return redirect("#")
 
 # MySQL connect Test
 @app.route('/dbtest', methods=['POST'])
@@ -119,13 +118,12 @@ def dbtest():
         gender = request.form['gender']
         size = request.form['size']
 
-        db = pymysql.connect(host='localhost', port=3306,
-            user='root', password='1234', database='smartproject',
-            charset='utf8')
+        db = pymysql.connect(host="localhost", port=3306,
+        user="user_id", password="password", database="dbname",
+        charset="utf8")
         cursor = db.cursor()
 
         # DB 데이터 삽입하기
-        cursor.execute('use smartproject;')
         cursor.execute('INSERT INTO shop_product (name, price, detail, stock, gender, size) VALUES (%s,%s,%s,%s,%s,%s)',(name, price, detail, stock, gender, size,))
 
         # DB에 수정사항 반영하기
